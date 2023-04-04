@@ -1,0 +1,26 @@
+@charset "utf-8";
+#topmenu {
+	height: 30px; width: 850px;
+}
+#topmenu ul li {
+	list-style : none;
+	color: white;
+	background-color: #2d2d2d;
+	float: left;
+	line-height: 30px;
+	vertical-align: middle;
+	text-align: center;
+}
+#topMenu .menuLink {
+	text-decoration: None;
+	color: white;
+	display: block;
+	width: 150px;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: "Trevuchet MS", Dotum, Arial, Helvetica, sans-serif;
+}
+#topMenu .menuLink:hover {
+	color: blue;
+	background-color: #4d4d4d;
+}
