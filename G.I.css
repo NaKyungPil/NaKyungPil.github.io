@@ -1,27 +1,39 @@
 @charset "utf-8";
-#topmenu {
-	height: 30px; 
-	width: 850px;
+body{
+	background:#ccc;
+	margin: 0;
+	padding: 0;
 }
-#topmenu ul li {
-	list-style : none;
-	color: white;
-	background-color: #2d2d2d;
-	float: left;
-	line-height: 30px;
-	vertical-align: middle;
-	text-align: center;
+.nav{
+	position:-webkit-sticky;
+	position:sticky;
+	top:0;
 }
-#topmenu .menulink {
-	text-decoration: none;
-	color: white;
-	display: block;
-	width: 150px;
-	font-size: 12px;
-	font-weight: bold;
-	font-family: "Trevuchet MS", Dotum, Arial, Helvetica, sans-serif;
+
+.nav ul {
+    list-style: none;
+    background:black;
+    text-align: center;
+    padding:0;
+    margin:0;
 }
-#topmenu .menulink:hover {
-	color: black;
-	background-color: white;
+
+.nav li {
+    display: inline-block;
 }
+
+.nav a {
+    text-decoration: none;
+    color:#fff;
+    width:100px;
+    display: block;
+    padding: 15px;
+    font-size: 13px;
+    font-family: sans-serif;
+}
+
+.nav a:hover {
+	color : black;
+    background: white;
+}
+
