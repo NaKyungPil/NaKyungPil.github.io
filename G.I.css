@@ -99,11 +99,22 @@ summary{
     list-style : none;
 
 }
-footer{
-    background-color: #cccccca2;
-    height: 100px;
+.body-wrap{
+    min-height: 100%;
     position: relative;
-    transform: translateY(-100%);  
+}
+.body-content{
+    margin-top: 100px;
+    padding-bottom: 100px;
+}
+footer{
+    background-color: #40b83c23;
+    width: 100%;
+    height: 45px;
+    position: relative;
+    transform: translatY(-100%);
+    bottom: 0;
+    text-align: left; 
 }
 .footer-text{
     font-weight: bold;
