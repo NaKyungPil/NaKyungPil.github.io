@@ -17,7 +17,6 @@ header{
     text-align : center;
 }
 .nav{
-	position:-webkit-sticky;
 	position:sticky;
 	top:0;
 }
@@ -28,10 +27,9 @@ header{
     padding:0;
     margin:0;
 }
-.nav li {
+.nav li { /* 내부적으로는 block 외부적으로는 inline */
     display: inline-block;
 }
-
 .nav a {
     text-decoration: none;
     color:#fff;
@@ -41,7 +39,6 @@ header{
     font-size: 13px;
     font-family: sans-serif;
 }
-
 .nav a:hover {
 	color : black;
     background: white;
@@ -50,7 +47,6 @@ h2 {
     margin-left : 300px;
     margin-right : 300px;
 }
-
 .search{
     float:left;
     margin-top: 2px;
@@ -128,4 +124,15 @@ footer{
 .copyright{
     font-size:8px;
     color:gray;
+}
+.news{
+    font-size: 13px;
+    width: 800px;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+.news-title{
+    font-size: 18px;
 }
