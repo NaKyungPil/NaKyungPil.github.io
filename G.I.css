@@ -38,46 +38,6 @@ header{
     padding: 15px;
     font-size: 13px;
     font-family: sans-serif;
-@charset "utf-8";
-body{
-	background:#ccc;
-    margin-right:300px;
-    margin-left:300px;    
-	padding: 0;
-}
-img{  
-    float:left;
-}
-header{
-    height: 30px;
-    padding:0;
-    width:100%;
-    margin-top : 20px;
-    margin-bottom : 20px;
-    text-align : center;
-}
-.nav{
-	position:sticky;
-	top:0;
-}
-.nav ul {
-    list-style: none;
-    background:black;
-    text-align: center;
-    padding:0;
-    margin:0;
-}
-.nav li { /* 내부적으로는 block 외부적으로는 inline */
-    display: inline-block;
-}
-.nav a {
-    text-decoration: none;
-    color:#fff;
-    width:100px;
-    display: block;
-    padding: 15px;
-    font-size: 13px;
-    font-family: sans-serif;
 }
 .nav a:hover {
 	color : black;
