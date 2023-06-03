@@ -7,40 +7,56 @@
 		<link type ="text/css"rel="stylesheet" href="G.I.css">
 	</head>
 	<body>
-		<div class="body-wrap">
 			<div class="body-content">
 				<header>
 					<a href="https://nakyungpil.github.io"><img src ="logo.png"></a>
-					<form class ="search">
-						<input type="text" placeholder ="종목 검색" >
+					<form name ="sfrom" class ="search" action="https://kr.investing.com/search/" method="get" target="_blank">
+						<input name="q" type="text" placeholder ="종목 검색" >
 					</form>
-					</header>
-					<div class = "nav">
-					<ul>
-						<li><a href ="chart.html">차트</a></li>
-						<li><a href ="news.html">뉴스</a></li>
-						<li><a href ="analysis.html">분석</a></li>
-						<li><a href ="comparison.html">비교</a></li>
-					</ul>
-					</div>
-					<hr>		
-					<div class = "_KOSPI">
-						<p>코스피 그래프 이미지<p>
-					</div>
-					<div class = "short">
-						<p>상위 1종목 현재가<p>
-					</div>
-					<div class = "news">
-						<p>적은 개수의 뉴스들</p>
-					</div>			
+				</header>
+				<div class = "nav">
+				<ul>
+					<li><a href ="chart.html">차트</a></li>
+					<li><a href ="news.html">뉴스</a></li>
+					<li><a href ="analysis.html">분석</a></li>
+					<li><a href ="comparison.html">비교</a></li>
+				</ul>
+				</div>
+				<hr>
+				<p>금융 관련 뉴스</p>
+				<table class="news">
+					<tr>
+						<td style="height:100px;"><a href="https://biz.chosun.com/industry/company/2023/05/29/4BN5EGD2RZEDHEG5GQLEI6UJQQ/?utm_source=naver&utm_medium=original&utm_campaign=biz" class ="news-hyper"target="_blank"><img src = "./두산.jpeg" style="width:100px; height:100px; border-radius:5px 5px 5px 5px"><div class="news-title">두산에너빌리티, 국제핵융합실험로 가압기 출하</div><br>'인공태양'만드는 프로젝트 국제핵융합실험로 공급<br>"경험,기술력 바탕 유럽 엄격 기준 충족, 원전 시장 참여 확대"</a></td>
+					</tr>
+					<tr>
+						<td style="height:100px;"><a href="https://www.sedaily.com/NewsView/29PS2GZK1S" class ="news-hyper"target="_blank"><img src = "./대우조선해양.png" style="width:100px; height:100px; border-radius:5px 5px 5px 5px"><div class="news-title">대우조선해양, 3.14% 오르며 체결강도 강세 지속(144%)</div><br>지난 1개월간 대우조선해양은 12.36%상승</a></td>
+					</tr>
+					<tr>
+						<td style="height:100px;"><a href="https://www.getnews.co.kr/news/articleView.html?idxno=623039" class ="news-hyper"target="_blank"><img src = "./네이버.jpeg" style="width:100px; height:100px; border-radius:5px 5px 5px 5px"><div class="news-title">'NAVER, 2분기에 실적 주가 변곡점 될 것'...NH투자증권</div><br>NAVER의 실적과 주가가 광고 집행이 늘면서 2분기가 변곡점이 될 것이란 분석이 나왔다.</a></td>
+					</tr>
+					<tr>
+						<td style="height:100px;"><a href="https://dealsite.co.kr/articles/104337" class ="news-hyper"target="_blank"><img src = "./에코프로.jpeg" style="width:100px; height:100px; border-radius:5px 5px 5px 5px"><div class="news-title">에코프로비엠, 국내외 공격적 양극재 증설</div><br>에코프로비엠이 국내외에서 공격적인 투자행보를 보이고 있다.</a></td>
+					</tr>
+					<tr>
+						<td style="height:100px;"><a href="https://m.hani.co.kr/arti/economy/economy_general/1093897.html" class ="news-hyper"target="_blank"><img src = "./국민연금.jpeg" style="width:100px; height:100px; border-radius:5px 5px 5px 5px"><div class="news-title">국민연금 1분기 투자수익류6.35%, 국내주식은 12.4%</div><br>국민연금이 올해 1분기 말 기준으로 6.35%의 수익률을 기록했다.</a></td>
+					</tr>
+					<tr>
+						<td style="height:100px;"><a href="https://www.joongang.co.kr/article/25166113#home" class ="news-hyper"target="_blank"><img src = "./외국인.png" style="width:100px; height:100px; border-radius:5px 5px 5px 5px"><div class="news-title">반도체에 꽂힌 외국인, 한국 주식 폭풍쇼핑</div><br>29일 한국거래소에 따르면 올 초부터 이달 26까지 외국인은 코스피 종목을 12조4991억원어치 순매수했다.</a></td>
+					</tr>
+					<tr>
+						<td style="height:100px;"><a href="https://zdnet.co.kr/view/?no=20230530154333" class ="news-hyper"target="_blank"><img src = "./반도체.jpeg" style="width:100px; height:100px; border-radius:5px 5px 5px 5px"><div class="news-title">반도체 주가 훈풍...'7만전자,11만닉스'뭘 살까</div><br>인공지능 산업이 성장할 것이라는 기대감에 반도체 회사 주가가 상승세인 가운데 삼성전자 상승 여력이<br>SK하이닉스보다 큰 것으로 나타났다.</a></td>
+					</tr>
+					<tr>
+						<td style="height:100px;"><a href="https://zdnet.co.kr/view/?no=20230529092524" class ="news-hyper"target="_blank"><img src = "./LG전자.jpeg" style="width:100px; height:100px; border-radius:5px 5px 5px 5px"><div class="news-title">LG전자, 미세 초음파 클렌저'프라엘 워시멜로'출시</div><br>LG전자가 여름철 피부관리에 최적화한 미세 초음파 클렌저'LG 프라엘 워시멜로"를 출시했다.</a></td>
+					</tr>
+				</table>						
 		    </div>			
-		    <footer>
-			    <div class="footer">
-				    <div class = "footer-text">(주)Gachon Investing</div>
-				    <div class = "footer-mail">컨택 : ktf981229@gmail.com</div>
-				    <div class = "copyright">Copyright ⓒ 2023. Gachon Investing. All Right Reserved</div>
-			    </div>
-		    </footer>
-		</div>
+		<footer>
+			<div class="footer">
+				<div class = "footer-text">(주)Gachon Investing</div>
+				<div class = "footer-mail">컨택 : ktf981229@gmail.com</div>
+				<div class = "copyright">Copyright ⓒ 2023. Gachon Investing. All Right Reserved</div>
+			</div>
+		</footer>
 	</body>
 </html>
