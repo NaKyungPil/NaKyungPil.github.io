@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html  lang = "ko">
 	<head>
-		<meta charset = "UTF-8"/>
+		<meta charset = "UTF-8">
 		<title>Gachon Investing</title>
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
 		<link type ="text/css"rel="stylesheet" href="G.I.css">
 	</head>
 	<body>
-		<header>
-		<img src ="logo.png">
-		<div class ="search">
-			<input type="text" placeholder ="종목 검색" >
-		</div>
-		</header>
-		<div class = "nav">
-		<ul>
-			<li><a href ="chart.html">차트</a></li>
-			<li><a href ="news.html">뉴스</a></li>
-			<li><a href ="analysis.html">분석</a></li>
-			<li><a href ="comparison.html">비교</a></li>
-			<li><a href ="my.html">MY</a></li>
-		</ul>
-		</div>
-		<hr>
-		<p class = finance-statements>기업 별 재무제표</p>
+			<div class="body-content">
+				<header>
+					<a href="https://nakyungpil.github.io"><img src ="logo.png"></a>
+					<form name ="sfrom" class ="search" action="https://kr.investing.com/search/" method="get" target="_blank">
+						<input name="q" type="text" placeholder ="종목 검색" >
+					</form>
+				</header>
+				<div class = "nav">
+				<ul>
+					<li><a href ="chart.html">차트</a></li>
+					<li><a href ="news.html">뉴스</a></li>
+					<li><a href ="analysis.html">분석</a></li>
+					<li><a href ="comparison.html">비교</a></li>
+				</ul>
+				</div>
+				<hr>		
+				<p class = finance-statements>기업 별 재무제표</p>
 			<div class = "summary-text">재무제표란 기업의 재무상황을 이해당사자에게 제공하기 위해 정해진 기준에 의해 작성된 재무적인 정보입니다. 구체적으로 재무상태표, 손익계산서, 현금흐름표, 자본변동표, 주석 및 부속명세서가 이러한 정보에 해당 됩니다.</div>
 		<hr>
 		<details>
@@ -66,5 +66,14 @@
 			<summary>NAVER</summary>
 			<iframe src = ./stocks/035420.html width="100%"height="530px" frameborder=0></iframe>
 		</details><hr class = "hr_solid">
+
+		    </div>			
+		<footer>
+			<div class="footer">
+				<div class = "footer-text">(주)Gachon Investing</div>
+				<div class = "footer-mail">컨택 : ktf981229@gmail.com</div>
+				<div class = "copyright">Copyright ⓒ 2023. Gachon Investing. All Right Reserved</div>
+			</div>
+		</footer>
 	</body>
 </html>
