@@ -1,34 +1,246 @@
 <!DOCTYPE html>
 <html  lang = "ko">
 	<head>
-		<meta charset = "UTF-8"/>
+		<meta charset = "UTF-8">
 		<title>Gachon Investing</title>
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
 		<link type ="text/css"rel="stylesheet" href="G.I.css">
+		<script>
+			function compute_correlation(){
+				var correlation ={
+					"삼성전자_LG에너지솔루션" : 0.52,
+					"삼성전자_SK하이닉스" : 0.43,
+                    "삼성전자_삼성바이오로직스" : -0.17,
+                    "삼성전자_LG화학" : 0.62,
+                    "삼성전자_삼성SDI" : 0.52,
+                    "삼성전자_삼성전자우" : 0.83,
+                    "삼성전자_현대차" : 0.64,
+                    "삼성전자_기아" : 0.47,
+                    "삼성전자_NAVER" : 0.10,
+					"삼성전자_삼성전자" : 1,
+
+					"LG에너지솔루션_삼성전자" : 0.52,
+					"LG에너지솔루션_LG에너지솔루션" : 1,
+					"LG에너지솔루션_SK하이닉스" : -0.23,
+					"LG에너지솔루션_삼성바이오로직스" : -0.01,
+					"LG에너지솔루션_LG화학" : 0.90,
+					"LG에너지솔루션_삼성SDI" : 0.93,
+					"LG에너지솔루션_삼성전자우" : 0.22,
+					"LG에너지솔루션_현대차" : 0.27,
+					"LG에너지솔루션_기아" : 0.05,
+					"LG에너지솔루션_NAVER" : -0.56,
+
+					"SK하이닉스_삼성전자" : 0.43,
+					"SK하이닉스_LG에너지솔루션" : -0.23,
+					"SK하이닉스_SK하이닉스" : 1,
+					"SK하이닉스_삼성바이오로직스" : 0.05,
+					"SK하이닉스_LG화학" : -0.20,
+					"SK하이닉스_삼성SDI" : -0.28,
+					"SK하이닉스_삼성전자우" : 0.58,
+					"SK하이닉스_현대차" : 0.42,
+					"SK하이닉스_기아" : 0.54,
+					"SK하이닉스_NAVER" : 0.61,
+
+					"삼성바이오로직스_삼성전자" : -0.17,
+					"삼성바이오로직스_LG에너지솔루션" : -0.01,
+					"삼성바이오로직스_SK하이닉스" : 0.05,
+					"삼성바이오로직스_삼성바이오로직스" : 1,
+					"삼성바이오로직스_LG화학" : -0.06,
+					"삼성바이오로직스_삼성SDI" : -0.03,
+					"삼성바이오로직스_삼성전자우" : 0.17,
+					"삼성바이오로직스_현대차" : -0.44,
+					"삼성바이오로직스_기아" : -0.36,
+					"삼성바이오로직스_NAVER" : 0.04,
+
+					"LG화학_삼성전자" : 0.62,
+					"LG화학_LG에너지솔루션" : 0.90,
+					"LG화학_SK하이닉스" : -0.20,
+					"LG화학_삼성바이오로직스" : -0.06,
+					"LG화학_LG화학" : 1,
+					"LG화학_삼성SDI" : 0.89,
+					"LG화학_삼성전자우" : 0.33,
+					"LG화학_현대차" : 0.41,
+					"LG화학_기아" : 0.20,
+					"LG화학_NAVER" : -0.33,
+
+					"삼성SDI_삼성전자" : 0.52,
+					"삼성SDI_LG에너지솔루션" : 0.93,
+					"삼성SDI_SK하이닉스" : -0.28,
+					"삼성SDI_삼성바이오로직스" : -0.03,
+					"삼성SDI_LG화학" : 0.89,
+					"삼성SDI_삼성SDI" : 1,
+					"삼성SDI_삼성전자우" : 0.24,
+					"삼성SDI_현대차" : 0.21,
+					"삼성SDI_기아" : -0.01,
+					"삼성SDI_NAVER" : -0.51,
+
+					"삼성전자우_삼성전자" : 0.83,
+					"삼성전자우_LG에너지솔루션" : 0.22,
+					"삼성전자우_SK하이닉스" : 0.58,
+					"삼성전자우_삼성바이오로직스" : 0.17,
+					"삼성전자우_LG화학" : 0.33,
+					"삼성전자우_삼성SDI" : 0.24,
+					"삼성전자우_삼성전자우" : 1,
+					"삼성전자우_현대차" : 0.35,
+					"삼성전자우_기아" : 0.25,
+					"삼성전자우_NAVER" : 0.35,
+
+					"현대차_삼성전자" : 0.64,
+					"현대차_LG에너지솔루션" : 0.27,
+					"현대차_SK하이닉스" : 0.42,
+					"현대차_삼성바이오로직스" : -0.44,
+					"현대차_LG화학" : 0.41,
+					"현대차_삼성SDI" : 0.21,
+					"현대차_삼성전자우" : 0.35,
+					"현대차_현대차" : 1,
+					"현대차_기아" : 0.92,
+					"현대차_NAVER" : 0.35,
+
+					"기아_삼성전자" : 0.47,
+					"기아_LG에너지솔루션" : 0.05,
+					"기아_SK하이닉스" : 0.54,
+					"기아_삼성바이오로직스" : -0.36,
+					"기아_LG화학" : 0.20,
+					"기아_삼성SDI" : -0.01,
+					"기아_삼성전자우" : 0.25,
+					"기아_현대차" : 0.92,
+					"기아_기아" : 1,
+					"기아_NAVER" : 0.54,
+
+					"NAVER_삼성전자" : 0.10,
+					"NAVER_LG에너지솔루션" : -0.56,
+					"NAVER_SK하이닉스" : 0.61,
+					"NAVER_삼성바이오로직스" : 0.04,
+					"NAVER_LG화학" : -0.33,
+					"NAVER_삼성SDI" : -0.51,
+					"NAVER_삼성전자우" : 0.35,
+					"NAVER_현대차" : 0.35,
+					"NAVER_기아" : 0.54,
+					"NAVER_NAVER" : 1
+				}
+				var stock1 = document.getElementById("stock1").value;
+				var stock2 = document.getElementById("stock2").value;
+
+				var correlation_word = stock1+"_"+stock2;
+
+				var result_correlation = document.getElementById("result");
+				if(correlation.hasOwnProperty(correlation_word)){
+					var correlation2 = correlation[correlation_word];
+					result_correlation.innerText = "상관계수 : " + correlation2
+				}
+			}
+
+				function compute_sharp(){
+					var sharp={
+						"삼성전자":0.32,
+						"LG에너지솔루션":0.95,
+						"SK하이닉스":0.17,
+						"삼성바이오로직스":-0.41,
+						"LG화학":0.65,
+						"삼성SDI":0.73,
+						"삼성전자우":0.02,
+						"현대차":0.62,
+						"기아":0.11,
+						"NAVER":-0.79
+					}
+				
+				var stock3 = document.getElementById("stock3").value;
+				var result_sharp = document.getElementById("result2");
+				if(sharp.hasOwnProperty(stock3)){
+					var sharp2 = sharp[stock3];
+					result_sharp.innerText = "샤프비율 : " + sharp2
+				}
+			
+			}
+
+			
+		</script>
 	</head>
 	<body>
-		<header>
-		<img src ="logo.png">
-		<div class ="search">
-			<input type="text" placeholder ="종목 검색" >
-		</div>
-		</header>
-		<div class = "nav">
-		<ul>
-			<li><a href ="chart.html">차트</a></li>
-			<li><a href ="news.html">뉴스</a></li>
-			<li><a href ="analysis.html">분석</a></li>
-			<li><a href ="comparison.html">비교</a></li>
-			<li><a href ="my.html">MY</a></li>
-		</ul>
-		</div>
-		<hr>
-		<p>종목별 비교</p>
-		<div class = "versus">
-			<p class = "correlation">상관계수</p>
-			<div class = "summary-text">상관계수란 해당 값이 1 또는 -1에 가까울 수록 두 종목 사이의 연관성이 크고, 0에 가까울 수록 약함을 의미한다. -1에 가까울수록 보편적으로 한 종목의 등락과 반대로 다른 종목이 움직인다.</div>
-		</div>
-
-		
+			<div class="body-content">
+				<header>
+					<a href="https://nakyungpil.github.io"><img src ="logo.png"></a>
+					<form name ="sfrom" class ="search" action="https://kr.investing.com/search/" method="get" target="_blank">
+						<input name="q" type="text" placeholder ="종목 검색" >
+					</form>
+				</header>
+				<div class = "nav">
+				<ul>
+					<li><a href ="chart.html">차트</a></li>
+					<li><a href ="news.html">뉴스</a></li>
+					<li><a href ="analysis.html">분석</a></li>
+					<li><a href ="comparison.html">비교</a></li>
+				</ul>
+				</div>
+				<hr>		
+				<p style="font-size:20px">종목별 비교</p>
+				<hr>
+    		    <div>
+	    	    	<p class = "correlation">상관계수</p>
+	    		    <div class = "summary-text">상관계수란 해당 값이 1 또는 -1에 가까울 수록 두 종목 사이의 연관성이 크고, 0에 가까울 수록 약함을 의미한다. -1에 가까울수록 보편적으로 한 종목의 등락과 반대로 다른 종목이 움직인다.</div><hr>
+					<p class = "correlation_exp">왜 상관계수가 낮으면 좋은가?</p>
+					<div class = "summary-text">포트폴리오를 구성할때는 수익률을 높이는 것이 중요하지만 그만큼 중요한 사항이 리스크를 제거하는 것이다. 한 주식에 투자를 할때 상관계수가 음수인 항목에 동시 투자를 하게 된다면 한쪽의 움직임과 반대로 움직일 확률이 높아짐으로 리스크를 낮출 수 있다.</div><br>
+	            </div>
+				<form>
+					<label for="stock1">종목1</label>
+				<input type = "text" list="stocks1" id = "stock1" style="width:200px">	
+					<datalist id="stocks1">
+						<option value="삼성전자"></option>
+						<option value="LG에너지솔루션"></option>
+						<option value="SK하이닉스"></option>
+						<option value="삼성바이오로직스"></option>
+						<option value="LG화학"></option>
+						<option value="삼성SDI"></option>
+						<option value="삼성전자우"></option>
+						<option value="현대차"></option>
+						<option value="기아"></option>
+						<option value="NAVER"></option>				
+					</datalist>
+				<label for="stock2">종목2</label>
+				<input type = "text" list="stocks2" id="stock2" style="width:200px">
+					<datalist id="stocks2">
+						<option value="삼성전자"></option>
+						<option value="LG에너지솔루션"></option>
+						<option value="SK하이닉스"></option>
+						<option value="삼성바이오로직스"></option>
+						<option value="LG화학"></option>
+						<option value="삼성SDI"></option>
+						<option value="삼성전자우"></option>
+						<option value="현대차"></option>
+						<option value="기아"></option>
+						<option value="NAVER"></option>
+					</datalist>
+					</form><br><button onclick="compute_correlation()">상관계수 값 계산하기</button> <div id="result"></div><hr>
+					<p class="sharp">샤프비율</p>
+					<div class = "summary-text">샤프비율이란 한 단위의 위험자산에 투자함으로써 얻은 초과수익의 정도를 나타내는 지표로 수치가 높을수록 좋은 투자라고 볼 수 있다.<br>예시로 A주식의 연 수익률이 10%이고 B주식의 연 수익률이 8%라면 A주식이 더 좋은 투자라고 볼 수 있지만 이러한 수익을 내기 위해 A가 더 위험한 주식이라고 가정하고 주식 A의 표준편차가 10%, B의 표준편차가 5%라고 가정하면 감수한 위험대비 수익률이 B가 더 높아 샤프지수가 높고 B가 더 좋은 투자라고 할 수 있다.</div>
+					<hr>
+					<form>
+					<label for ="stock3">종목</label>
+					<input type = "text" list="stocks3" id="stock3" style="width:200px">
+					<datalist id="stocks3">
+						<option value="삼성전자"></option>
+						<option value="LG에너지솔루션"></option>
+						<option value="SK하이닉스"></option>
+						<option value="삼성바이오로직스"></option>
+						<option value="LG화학"></option>
+						<option value="삼성SDI"></option>
+						<option value="삼성전자우"></option>
+						<option value="현대차"></option>
+						<option value="기아"></option>
+						<option value="NAVER"></option>
+					</datalist>
+					</form><br>
+					<button onclick="compute_sharp()">샤프비율 계산하기</button><div id="result2"></div>
+					
+					
+					
+		    </div>			
+		<footer>
+			<div class="footer">
+				<div class = "footer-text">(주)Gachon Investing</div>
+				<div class = "footer-mail">컨택 : ktf981229@gmail.com</div>
+				<div class = "copyright">Copyright ⓒ 2023. Gachon Investing. All Right Reserved</div>
+			</div>
+		</footer>
 	</body>
 </html>
