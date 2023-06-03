@@ -5,43 +5,103 @@
 		<title>Gachon Investing</title>
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
 		<link type ="text/css"rel="stylesheet" href="G.I.css">
+		<style>
+			table{
+				font-size: 13px;
+				font-family: 'Times New Roman';
+			}
+			td {
+   			border-bottom: 1px solid #444444;
+   			padding: 10px;
+ 			}
+		</style>
 	</head>
-	<body>
-		<div class="body-wrap">
-			<div class="body-content">
-				<header>
-					<a href="https://nakyungpil.github.io"><img src ="logo.png"></a>
-					<form class ="search">
-						<input type="text" placeholder ="종목 검색" >
-					</form>
-					</header>
-					<div class = "nav">
-					<ul>
-						<li><a href ="chart.html">차트</a></li>
-						<li><a href ="news.html">뉴스</a></li>
-						<li><a href ="analysis.html">분석</a></li>
-						<li><a href ="comparison.html">비교</a></li>
-						<li><a href ="my.html">MY</a></li>
-					</ul>
-					</div>
-					<hr>		
-					<div class = "_KOSPI">
-						<p>코스피 그래프 이미지<p>
-					</div>
-					<div class = "short">
-						<p>상위 1종목 현재가<p>
-					</div>
-					<div class = "news">
-						<p>적은 개수의 뉴스들</p>
-					</div>			
-		    </div>			
-		    <footer>
-			    <div class="footer">
-				    <div class = "footer-text">(주)Gachon Investing</div>
-				    <div class = "footer-mail">컨택 : ktf981229@gmail.com</div>
-				    <div class = "copyright">Copyright ⓒ 2023. Gachon Investing. All Right Reserved</div>
-			    </div>
-		    </footer>
-		</div>
+	<body>		
+		<div class="body-content">
+			<header>
+				<a href="https://nakyungpil.github.io"><img src ="logo.png"></a>
+				<form name ="sfrom" class ="search" action="https://kr.investing.com/search/" method="get" target="_blank">
+					<input name="q" type="text" placeholder ="종목 검색" >
+				</form>
+			</header>
+			<div class = "nav">
+			<ul>
+				<li><a href ="chart.html">차트</a></li>
+				<li><a href ="news.html">뉴스</a></li>
+				<li><a href ="analysis.html">분석</a></li>
+				<li><a href ="comparison.html">비교</a></li>
+			</ul>
+			</div>
+			<hr>
+			<br>
+			<div class="set">
+				<div class="block1">
+					<a href ="https://kr.investing.com/news/stock-market-news/article-915843" class="news-hyper" target="_blank"><img src="Main.jpg" style="height:200px ;width:200px"><div class="news-title">2차전지가 밀고 반도체가 끌었다! 코스피, 1년만에 2600선 돌파</div><br>코스피지수가 1년 만에 2600포인트를 돌파했다. 연초 2차전지 열풍에 이은 반도체 랠리로 유의미한 결과물을 만들어 냈다는 분석이다.</a>				  
+				</div>			
+				<div class="block2">
+					&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp코스피지수<iframe src="./stocks_graph_img/코스피.html" width='300px', height='300px' frameborder="0"></iframe>				  
+				</div>			
+				<div class="block3">
+					<iframe src="https://www.youtube.com/embed/sgtVQiPOemg" width="500px" height="400px" frameborder="0"></iframe>				  
+				</div>
+				<div class="table_">
+				<table>
+					<tr>
+						<td>중앙 은행 금리</td><td></td><td></td>
+					</tr>
+					<tr>
+						<td>중앙은행</td><td>금리</td><td>다음 회의</td>
+					</tr>
+					<tr>
+						<td><img src="./country/South Korea.png">BOK</td><td>3.50%</td><td>2023년07월13일</td>
+					<tr>
+						<td><img src="./country/USA.png">FED</td><td>5.25%</td><td>2023년05월14일</td>
+					</tr>
+					<tr>
+						<td><img src="./country/EU.png">ECB</td><td>3.75%</td><td>2023년06월15일</td>
+					</tr>
+					<tr>
+						<td><img src="./country/England.png">BOE</td><td>4.50%</td><td>2023년06월22일</td>
+					</tr>
+					<tr>
+						<td><img src="./country/Switzerland.png">SNB</td><td>1.50%</td><td>2023년06월22일</td>
+					</tr>
+					<tr>
+						<td><img src="./country/Australia.png">RBA</td><td>3.85%</td><td>2023년06월06일</td>
+					</tr>
+					<tr>
+						<td><img src="./country/Canada.png">BOC</td><td>4.50%</td><td>2023년06월07일</td>
+					</tr>
+					<tr>
+						<td><img src="./country/Japan.png">BOJ</td><td>-0.10%</td><td>2023년06월16일</td>
+					</tr>
+					<tr>
+						<td><img src="./country/Russian Federation.png">CBR</td><td>7.50%</td><td>2023년06월09일</td>
+					</tr>
+					<tr>
+						<td><img src="./country/India.png">RBI</td><td>6.50%</td><td>2023년06월08일</td>
+					</tr>
+					<tr>
+						<td><img src="./country/China.png">PBOC</td><td>3.65%</td><td></td>
+					</tr>
+					<tr>
+						<td><img src="./country/Brazil.png">BCB</td><td>13.75%</td><td>2023년06월21일</td>
+					</tr>
+				</table>
+				</div>
+				<div class="block4">
+				  
+				  
+				</div>
+			  </div>
+			
+		</div>			
+		<footer>
+			<div class="footer">
+				<div class = "footer-text">(주)Gachon Investing</div>
+				<div class = "footer-mail">컨택 : ktf981229@gmail.com</div>
+				<div class = "copyright">Copyright ⓒ 2023. Gachon Investing. All Right Reserved</div>
+			</div>
+		</footer>		
 	</body>
 </html>
