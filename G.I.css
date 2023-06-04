@@ -64,24 +64,37 @@ input{
     width: 500px;
     height: 300px;
     float: left;
+    border: 1px solid gray;
+    height: 100%;
+    border-radius: 8px 8px 8px 8px;
 }
 
 .block2{
     width: 350px;
-    height: 350px;
-    float: right;
-    margin-left:60px
+    height: 350px;  
+    margin-left:50px;
+    border: 1px solid gray;
+    text-align:center;
+    border-radius: 8px 8px 8px 8px;
     
 }
 .block3{
     width: 500px;
-    height: 450px;
+    height: 400px;
+    border: 1px solid gray;
+    border-radius: 8px 8px 8px 8px;
 }
 
 .block4{
     width: 350px;
-    height: 350px;
+    height: 400px;
     margin-left:50px;
+    border: 1px solid gray;
+    text-align:center;
+    border-radius: 8px 8px 8px 8px;
+}
+.block4 table{
+    margin:0 auto;
 }
 summary{
     cursor: pointer;
