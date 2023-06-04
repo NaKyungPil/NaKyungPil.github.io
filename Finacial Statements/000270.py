@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 import requests
 code = "000270"
 URL = f"https://finance.naver.com/item/main.naver?code={code}"
