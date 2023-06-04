@@ -7,5 +7,5 @@ r = requests.get(URL)
 df = pd.read_html(r.text)[3]
 df = df.replace({np.nan: ""})
 
-html = df.to_html(justify='center', index = False)
+html = df.to_html()
 print(html)
